@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <extpages_index_index>
+        <reference name="content">
+            <block type="extcms/pages" name="extpages" template="extcms/pages.phtml"/>
+        </reference>
+    </extpages_index_index>
+</layout>

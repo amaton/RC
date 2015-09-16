@@ -1,0 +1,31 @@
+<?php
+/** @var $this RC_Extcms_Block_Pages*/
+/** @var  $pages Mage_Cms_Model_Resource_Page_Collection */
+$pages = $this->getCategoryPagesForList();
+$currCategory = false;
+$categoryAttribute = RC_Extcms_Helper_Data::CATEGORY_ATTRIBUTE_NAME
+?>
+<ul>
+    <?php foreach($pages as $key=>$page) : ?>
+
+        <?php if ($page[$categoryAttribute] !== $currCategory) : ?>
+            <!-- Save new current category -->
+            <?php $currCategory = $page[$categoryAttribute]; ?>
+            <!-- Close previous inner list with pages in case if it is not first item-->
+            <?php echo $key > 0 ? '</ul>' : ''?>
+                <!-- Show new category entry -->
+                <li>
+                    <h1>
+                        <?php echo $this->__($page[$categoryAttribute] ? $page[$categoryAttribute] : 'Other')?> :
+                    </h1>
+                </li>
+            <!-- Open new inner list with pages -->
+            <ul>
+        <?php endif; ?>
+
+        <!-- Show page entity link  -->
+        <li>
+            <?php echo '<a href=" ' . Mage::getBaseUrl() . $page['identifier'] . '">' . $page['title'] . '</a>'?>
+        </li>
+    <?php endforeach;?>
+</ul>
