@@ -2,7 +2,7 @@
 There you can find 2 magento modules (ready for paste in any fresh magento installation) regarding RaceChip_BE_Coding_Challenge.pdf :
 
 1) Extcms module which implements Coding Challenge 1 - you can find additional field-set in "Page Information" tab with "Category" field and grouped list on http://your.domain/extpages ;
-TIme: ~3 hours;
+Time: ~3 hours;
 
 2) ExtSales module which implements Coding Challenge 2 -  you can find additional configuration tab in system/config which called "PDF Attachments" (you need re-login to enter it) with config fields for attached PDF template (you can choose from any transactional emails including custom ones);
 also you can find switcher to default behaviour there; 
